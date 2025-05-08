@@ -1,1 +1,23 @@
 utilizando una lista capturar las cinco calificacionesd de un alumno e imprimir el promedio 
+#include <stdio.h>
+
+int main() {
+    int calificaciones[5]; // Definiendo una lista para almacenar las calificaciones
+    int suma = 0;
+    float promedio;
+
+    // Captura de calificaciones
+    for(int i = 0; i < 5; i++) {
+        printf("Ingrese la calificación %d: ", i + 1);
+        scanf("%d", &calificaciones[i]);
+        suma += calificaciones[i]; // Sumando las calificaciones
+    }
+
+    // Cálculo del promedio
+    promedio = suma / 5.0;
+
+    // Imprimir el resultado
+    printf("El promedio de las calificaciones es: %.2f\n", promedio);
+
+    return 0;
+}
